@@ -3,7 +3,7 @@ the below function extends the error class in javascript and this class throws c
 */
 
 class ApiError extends Error{
-    constructor(statusCode,messege="something went wrong",errors=[],statck=""){
+    constructor(statusCode,messege="something went wrong",errors=[],stack=""){
         super(messege)
         this.statusCode=statusCode
         this.data=null
