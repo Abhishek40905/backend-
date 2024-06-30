@@ -14,8 +14,10 @@ a promise whcih is either resolved or rejectedby the below code
 */
 connectDB()
 .then(()=>{
-    app.listen(process.env.PORT)
-    console.log(`app is listening on ${process.env.PORT}`);
+    app.listen(process.env.PORT,()=>{
+        console.log(`app is listening on ${process.env.PORT}`);
+    })
+   
 })
 .catch((error)=>{
     console.log(error);
